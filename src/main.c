@@ -2,8 +2,8 @@
 #include "selection_layer.h"
 #include "alarm_window.h"
 
-#define NUM_MENU_ICONS 3
-#define NUM_FIRST_MENU_ITEMS 3
+#define NUM_MENU_ICONS 5
+#define NUM_FIRST_MENU_ITEMS 5
 #define APPMSG_INBOUND_SIZE 256
 #define APPMSG_OUTBOUND_SIZE 256
 
