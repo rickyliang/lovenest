@@ -1,0 +1,30 @@
+{
+    "appKeys": {
+        "KEY_ASLEEP": 69,
+        "KEY_WAKE_HOUR": 80,
+        "KEY_WAKE_MINUTE": 81,
+        "MESSAGE_TYPE": 99
+    },
+    "capabilities": [
+        "health"
+    ],
+    "companyName": "rickyhanliang@gmail.com",
+    "enableMultiJS": true,
+    "longName": "Climate Connect",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "Climate Connect",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk"
+    ],
+    "uuid": "69fdcd3e-09a5-4ff9-bb7c-ef6dbc67201d",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
