@@ -32,7 +32,6 @@ function postSleep(e) {
     }
   };
   req.send(params);
-  Pebble.showSimpleNotificationOnPebble("Climate Connect", "Confirmed! Enjoy your sleep!");
 }
 
 function postWake(e) {
@@ -46,6 +45,8 @@ function postWake(e) {
   req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   req.onload = function (e) {
     console.log("got something: " + JSON.stringify(e));
+    Pebble.showSimpleNotificationOnPebble("Climate Connect", "Confirmed! Enjoy your sleep!");
+    console.log("req: " + JSON.stringify(req));
     if (req.readyState == 4 && req.state == 200) {
       console.log("response OK");
     }
