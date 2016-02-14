@@ -238,15 +238,20 @@ static uint16_t menu_get_num_rows_callback(MenuLayer *menu_layer, uint16_t secti
 static void menu_draw_row_callback(GContext* ctx, const Layer *cell_layer, MenuIndex *cell_index, void *data) {
   switch (cell_index->row) {
     case 0:
-      menu_cell_basic_draw(ctx, cell_layer, "Set Wake Time", NULL, NULL);
-      break;
-    case 1:
       menu_cell_basic_draw(ctx, cell_layer, "Auto Sleep", s_onoff, NULL);
       break;
+    case 1:
+      menu_cell_basic_draw(ctx, cell_layer, "Set Wake Time", NULL, NULL);
+      break;
     case 2: 
-//       menu_cell_basic_draw(ctx, cell_layer, "Amy POST", NULL, NULL);
-      break;  
-    break;
+      menu_cell_basic_draw(ctx, cell_layer, "Set Wake Temp", NULL, NULL);
+      break;
+    case 3:
+      menu_cell_basic_draw(ctx, cell_layer, "Auto Body Temp", "OFF", NULL);
+      break;
+    case 4:
+      menu_cell_basic_draw(ctx, cell_layer, "Nest Control", NULL, NULL);
+      break;
   }
 }
 
@@ -254,10 +259,10 @@ static void menu_select_callback(MenuLayer *menu_layer, MenuIndex *cell_index, v
   // Use the row to specify which item will receive the select action
   switch (cell_index->row) {
     case 0:
-      wake_window_init();
+      auto_sleep_click();
       break;
     case 1:
-      auto_sleep_click();
+      wake_window_init();
       break;
     case 2:
 //       send_sleep(true);
