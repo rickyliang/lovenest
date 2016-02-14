@@ -32,6 +32,7 @@ function postSleep(e) {
     }
   };
   req.send(params);
+  Pebble.showSimpleNotificationOnPebble("Climate Connect", "Confirmed! Enjoy your sleep!");
 }
 
 function postWake(e) {
